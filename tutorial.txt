@@ -1,0 +1,143 @@
+CREATE TABLE Person (
+  ID INTEGER PRIMARY KEY, 
+  name VARCHAR(100)
+) AS NODE;
+
+CREATE TABLE Academia (
+  ID INTEGER NOT NULL, 
+  name VARCHAR(100), 
+  city VARCHAR(100)
+) AS NODE
+
+
+
+INSERT INTO Person VALUES (1,'John');
+INSERT INTO Person VALUES (2,'Mary');
+INSERT INTO Person VALUES (3,'Alice');
+INSERT INTO Person VALUES (4,'Jacob');
+INSERT INTO Person VALUES (5,'Julie');
+
+INSERT INTO Academia VALUES (1,'CapmNow','Lima');
+INSERT INTO Academia VALUES (2,'Cereza','sjl');
+INSERT INTO Academia VALUES (3,'Bruild', 'sjm');
+
+
+SELECT Person.name
+FROM Person, likes, Academia
+WHERE MATCH (Person-(likes)->Academia(locatedIn)->City 
+             
+
+
+
+en xampp doy start a apache y mysql
+
+
+en postman probamos el api introduciendo el url y dando start
+
+http://localhost:3000/users
+
+
+
+
+en sublime text
+
+
+
+cmd
+*npm init --yes
+//instalar dependencias
+*npm i express body-parser morgan mysql
+
+*node src/app.js
+
+
+
+
+----------------------------codigo app.js----------------
+const express = require('express');
+const app = express();
+
+const morgan =require('morgan');
+const bodyParser =require('body-parser');
+
+// settings
+app.set('port', process.env.PORT || 3000);
+
+// middlewares
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+
+//routes
+require('./routes/userRoutes')(app);
+
+app.listen(app.get('port'), ()=>{
+	console.log('server on port 3000');
+});
+
+-------------------codigo user.js-------------------
+const mysql = require('mysql');
+
+connection = mysql.createConnection({
+	host:'localhost',
+	user:'root',
+	pasword: 'root',
+	database: 'colegio' 
+});
+
+let userModel ={};
+
+userModel.getUsers =(callback)=>
+{
+    if (connection) 
+    {
+	connection.query(
+		'SELECT * FROM alumno',
+		(err,rows) => {
+
+			if(err){
+				throw err;
+			}else {
+				callback(null,rows);
+			}
+		    }
+	    )
+    }
+};
+
+userModel.insertUser =(userData,callback) =>{
+	if (connection) {
+		connection.query(
+			'INSERT INTO users SET ?', userData,
+			(err, result)=>{
+				if(err){
+					throw err;
+				} else {
+					callback(null, {
+						//'InsertId'; result.
+					})
+				}
+			})
+	}
+}
+	 	
+module.exports =userModel;
+--------------------------codigo userRoutes.js---------------------
+const User =require('../models/user');
+module.exports = function (app){
+
+app.get('/users', (req, res) =>{
+	User.getUsers((err,data) =>{
+		res.status(200).json(data);
+
+	});
+});
+
+app.post('/users',(req,res) =>{
+	console.log(req.body);
+});
+}
+--------hasta aqui esta funcionando- 23.19    apirest con nodejs y Mysql-----------------
+
+
+
+

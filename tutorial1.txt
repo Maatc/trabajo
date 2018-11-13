@@ -1,0 +1,41 @@
+PRACTICA 11.11.18
+
+STACK:CONJUNTO DE TECNOLOgias para crear aplicaciones:
+
+4 tecnologias
+M NONGODB: BASE DE DATOS
+E EXPRESS: FRAMEWORK = es utilizar un codigo probado 
+A ANGULAR:INTERFACE
+N NODE JS:ENTORNO DE LADO DEL CLIENTE
+
+
+para el server abrir 
+index.js
+employee.js
+package.json
+employee.routes.js
+employee.controller.js
+database.js
+
+
+iniciar creando una carpeta
+luego en visual studio code como editor de codigo
+abrimos la carpeta creada
+y desde vs code creamos una nueva carpeta llamada server
+luego creamos una archivo index.js //codigo para configurar el servider cuando comiense
+
+
+
+
+npm install nodemon // reinicia la configuracion  en l servidor 
+
+
+npm install morgan
+
+
+npm run dev
+
+
+extras
+npm remove mongoose
+npm install mongoose

@@ -1,0 +1,843 @@
+codigo javascript
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin titulo</title>
+<script> document.write("hola alumnos");</script>
+<script> 
+	alert ("Adios Alumnos");
+
+</script> 
+<script src="ejemplo.js"></script>
+
+</head>
+
+<body>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jugando con variables</title>
+<link rel="stylesheet" href="EXTRAS/css/micss2.css">
+
+</head>
+
+<body>
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas</p>
+</div>
+<div class="contenido">
+	<div class="principal">
+<h1>Jugando con las variables</h1>
+<script>
+	var nombres=prompt("introduce tu nombre por favor");
+	var apellidos=prompt("introduce tu apellido porfavor");
+	var edad=parseInt(prompt("introduce tu edad por favor"));
+	document.write("<p>");
+	document.write("BIENVENIDO " + nombres + " " + apellidos 
+		+"<br/>");
+	document.write("tu edad es " + edad + " en 3 años tendras " + (edad+=3));
+	document.write("</p>");
+</script>
+
+</div>
+</div>
+
+</div>
+</body>
+</html>
+
+---------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Usando Arrays</title>
+<link rel="stylesheet" href="EXTRAS/video7/css/micss.css">
+<script>
+  var articulos=["zapatillas","camizas","pantalones","polos"];
+	
+</script>
+</head>
+
+<body>
+<div class="contenedor">
+  <div class="header">
+    <p class="logo">JavaScript Arrays <i class="mm">Píldoras Informáticas
+     </p>
+  </div>
+  <div class="contenido">
+    <div class="principal">
+      <h1>Manejando Arrays</h1>
+      <script>
+        document.write("<p> el primer articulo es <strong> " + articulos[0]+"</strong></p>");
+	  
+	  </script>
+     </div>
+  </div>
+  
+</div>
+</body>
+</html>
+-------------------------------------------------------------video 7----------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Usando Arrays</title>
+<link rel="stylesheet" href="EXTRAS/video7/css/micss.css">
+<script>
+  var articulos=["zapatillas","camizas","pantalones","polos"];
+	
+</script>
+</head>
+
+<body>
+<div class="contenedor">
+  <div class="header">
+    <p class="logo">JavaScript Arrays <i class="mm">Píldoras Informáticas
+     </p>
+  </div>
+  <div class="contenido">
+    <div class="principal">
+      <h1>Manejando Arrays</h1>
+      <script>
+        document.write("<p> el primer articulo es <strong> " + articulos[0]+"</strong></p>" + " <p>Total de articulos son " + articulos.length + " el ultimo articulo es " +articulos[articulos.length-1] +"</p>");
+        articulos.unshift(prompt("introduce un articulo"));
+        document.write("<p> Casi nos olvidamos... !!! Agregamos este elemento <strong>" +articulos[0] +"</strong>"+" ahora son " + articulos.length+ "</p>");
+
+        for (var i = 0; i <articulos.length; i++) {
+         articulos[i]
+       
+        document.write("<p> nuestros articulos son: ");
+        document.write("<strong>" +articulos[i] +"</strong></p>");
+	  }
+	  </script>
+     </div>
+  </div>
+  
+</div>
+</body>
+</html>
+---------------------------------------------------video9.plantilla-----------------------------
+<!doctype html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title> MI PRIMERA PAGINA WEB </title>
+</head>
+<body>
+
+	<script>
+		
+	</script>
+</body>
+</html>	
+------------------------------video9.poo---------------------------------------------------------
+<!doctype html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title> MI PRIMERA PAGINA WEB </title>
+</head>
+<body>
+	<input type ="button" id="boton1">
+	<input type ="button" id="boton2">
+
+	<script>
+		var miboton=document.getElementById('boton1');
+		miboton.style.width="300px";
+		//miboton.style.backgroundColor="red";
+		var miboton2=document.getElementById('boton2');
+		miboton2.style.width="300px";
+		miboton2.focus();
+		miboton2.value="boton2"
+	</script>
+</body>
+</html>
+-------------------------------------video11.if-------------------------------------------------
+
+<!doctype html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title> MI PRIMERA PAGINA WEB </title>
+</head>
+<body>
+<script>
+	var precioCoche=prompt("ingrese el precio del coche");
+	var dineroAhorrado=prompt("ingrese el dinero ahorrado");
+	if(dineroAhorrado>=precioCoche){
+		document.write("<p>si tienes el dinero para comprarte el coche</p>");
+	}else{
+		document.write("no tienes dinero para comprar tu coche"+ "</br>te falta <strong>"+ (precioCoche-dineroAhorrado) +"</strong> soles");
+	}
+</script>
+
+</body>
+</html>
+--------------------------------------video12.if2--------------------------------------------------
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+
+<style>
+
+table{
+	margin:auto;
+}
+
+
+</style>
+
+
+</head>
+
+<body id="cuerpo">
+<form name="form1" method="post" action="" id="miformulario">
+  <table width="25%" border="1" id="mitabla">
+    <tr>
+      <td>Nombre:</td>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield"></td>
+    </tr>
+    <tr>
+      <td>Apellidos:</td>
+      <td><input type="text" name="textfield2" id="textfield2"></td>
+    </tr>
+    <tr>
+      <td>Edad:</td>
+      <td><input type="text" name="textfield3" id="textfield3"></td>
+    </tr>
+    <tr>
+      <td>Carnet:</td>
+      <td><input type="text" name="textfield4" id="textfield4"></td>
+    </tr>
+    <tr>
+      <td><input type="submit" name="button" id="button" value="Enviar"></td>
+      <td><input type="reset" name="button2" id="button2" value="Restablecer"></td>
+    </tr>
+  </table>
+</form>
+
+
+
+
+
+</body>
+</html>
+----------------------------------------------------------video15_while-----------------------------
+<!doctype html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title> MI PRIMERA PAGINA WEB </title>
+</head>
+<body>
+<script>
+	var meses=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+	var contador=0;
+	while (contador<meses.length){
+		document.write((contador+1) +" mes = " +meses[contador]+ "</br>");
+		contador++;
+	}
+</script>
+
+</body>
+</html>
+-----------------------------------------------------video15_buclewhile-------------------------
+<!doctype html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title> MI PRIMERA PAGINA WEB </title>
+<style> #contenedor{
+	width: 25%;
+	background-color: #FFC;
+	margin:auto;
+	padding: 15px;
+}
+</style>
+</head>
+<body><script>
+	var nombre,edad,poblacion;
+	nombre=prompt("introduce tu nombre");
+	while(!isNaN(nombre)){
+		nombre=prompt("introduce tu nombre valido");
+
+	}
+	edad=prompt("introduce tu edad");
+	while(edad<=0 || edad>100 ||isNaN(edad)){
+		edad=prompt("introduce tu edad valida");
+	}
+
+	poblacion=prompt("introduce la poblacion");
+	while(!isNaN(poblacion)){
+		poblacion=prompt("introduce una poblacion valido");
+
+	}
+   
+
+</script>
+	
+	<div id="contenedor">
+		<p>Nombre:<script> document.write(nombre);</script></p>
+		<p>Edad:<script> document.write(edad);</script></p>
+		<p>Poblaciòn:<script> document.write(poblacion);</script></p>
+	</div>
+<script>
+</script>
+
+</body>
+</html>
+----------------------------------------------------------video16_do while-------------------
+<!doctype html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title> MI PRIMERA PAGINA WEB </title>
+</head>
+<body>
+	<script>
+    var aleatorio=Math.round(Math.random()*100);
+    var minum=0;
+    var intentos=0;
+    do {
+    	minum=prompt("introduce un numero entre 0 y 100");
+    	if(aleatorio<minum){
+    		alert("ingresa un numero menor");
+    	}else if(aleatorio>minum){
+    		alert("ingresa un numero mas alto");
+    	}
+    	intentos++
+
+    }while(aleatorio!=minum);
+            alert("el numero es correcto");
+            alert(intentos)
+	</script>
+</body>
+</html>
+----------------------------------video20_for---------------------------------------------
+
+<!doctype html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title> MI PRIMERA PAGINA WEB </title>
+</head>
+<body>
+
+	<script>
+		var trabajadores=[];
+		var persona="";
+		var contador=0;
+		while(persona!="salir"){
+		persona=prompt("ingresa el nombre de los trabajadores");
+		trabajadores[contador]=persona;
+		contador++;
+        }
+        trabajadores.pop();
+		for(i=0;i<trabajadores.length;i++){
+			document.write("<p>mi nombre es "+ trabajadores[i] +"</p><br/>");
+		}
+
+	</script>
+</body>
+</html>	
+-------------------------------------------------video_21_funciones------------------------------
+<!doctype html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title> MI PRIMERA PAGINA WEB </title>
+</head>
+<body>
+
+	<script>
+		function dia_de_hoy(){
+
+			var hoy= new Date();
+			document.write(hoy);
+		}
+
+	</script>
+
+	<script> dia_de_hoy();</script>
+</body>
+</html>	
+----------------------------------------video22_funciones-------------------------------------------
+<!doctype html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title> MI PRIMERA PAGINA WEB </title>
+</head>
+<body>
+
+	<script>
+		function suma(n1,n2){
+			var n1=prompt("ingresa un numero");
+			var n2=prompt("ingresa otro numero");
+			document.write((parseInt(n1)+parseInt(n2)));
+
+		}
+
+	</script>
+
+	<script>
+		suma();
+		document.write("<br/> suma otra vez <br/>"); 
+		suma();
+	</script>
+
+	<script> dia_de_hoy();</script>
+</body>
+</html>	
+-----------------------------------------video23_calculadora-------------------------------------
+<!doctype html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title> MI PRIMERA PAGINA WEB </title>
+</head>
+<body>
+
+	<script>
+		
+		    
+
+		function suma(n1,n2){
+			
+			alert(parseInt(n1)+parseInt(n2));
+		}
+		function resta(n1,n2){
+			alert(parseInt(n1)-parseInt(n2));
+
+		}
+		function multiplicacion(n1,n2){
+			alert(parseInt(n1)*parseInt(n2));
+
+		}
+		function division(n1,n2){
+			alert(parseInt(n1)/parseInt(n2));
+
+		}
+	do{
+		var n1=prompt("ingresa un numero");
+		var n2=prompt("ingresa otro numero");
+		var operacion;
+
+       
+
+		 operacion=prompt("elige la operacion a realisar suma");
+		if (operacion=="suma") {
+		suma(n1,n2);
+	    }else if (operacion=="resta") {
+		resta(n1,n2);
+	    }else if (operacion=="multiplicacion") {
+		multiplicacion(n1,n2);
+	    }else if (operacion=="division") {
+		division(n1,n2);
+	    }
+	    else{
+        	alert("operacion no contemplada");
+        }
+	    var repetir=prompt("desea repetir la operacion");
+        }
+	while(repetir=="si");
+		
+
+	</script>
+</body>
+</html>		
+-----------------------------------------------video24_eventos----------------------------------
+<!doctype html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title> MI PRIMERA PAGINA WEB </title>
+
+<script> 
+	function aviso(){
+		alert("Que buena foto churro");
+	}
+
+
+</script>
+</head>
+<body>
+	<img src="EXTRAS/video24/miguel24.jpg" width="425" heigth="286" onclick="aviso()">
+	<!--<img src="EXTRAS/video24/miguel11.jpg" width=320" heigth="286">
+	<img src="EXTRAS/video24/miguel7.jpg" width="390" heigth="286">-->
+
+	<script>
+	</script>
+</body>
+</html>	
+--------------------------------------------video35_practica_calculadora---------------------------
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+.linkdestacacursos{
+	background-color:#F00;
+	
+}
+
+a{
+	display:block;
+	margin-bottom:20px;
+	font-size:24px;
+}
+table{
+	text-align:center;
+	border:none;
+}
+
+td{
+	border:none;
+}
+
+#contieneEnlaces {
+	position: absolute;
+	left: 31px;
+	top: 65px;
+	width: 400px;
+	height: 649px;
+	z-index: 1;
+	padding-top:100px;
+}
+</style>
+
+<script src="Jquery/jquery-v3.3.1.js"></script>
+<script>
+	$(document).ready(function(){
+		//$("a[href^='https://']").addClass("linkdestacacursos");
+
+		document.getElementById("cursos").addEventListener("click",resaltacursos,false);
+		document.getElementById("informacion").addEventListener("click",resaltainformacion,false);
+	});
+
+function resaltacursos(){
+	$(".ejemplos").removeClass("linkdestacacursos");
+	$(".cursos").addClass("linkdestacacursos");
+}
+
+function resaltainformacion(){
+	$(".cursos").removeClass("linkdestacacursos");
+	$(".ejemplos").addClass("linkdestacacursos");
+
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="contieneEnlaces">
+
+<a href="https://www.youtube.com/watch?v=O7Ae8QCiBC4" target="_blank" class="cursos">
+Canal Maatc
+</a><br>
+
+<a href="http://www.google.com" target="_blank" class="ejemplos">
+Google
+</a><br>
+
+<a href="https://www.youtube.com/user/pildorasinformaticas" target="_blank" class="cursos">
+Píldoras informáticas YouTube
+</a><br>
+
+<a href="remover_reemplazar.html" target="_blank" >
+Remover y reemplazar
+</a><br>
+
+<a href="https://news.google.es/" target="_blank" class="ejemplos">
+Noticias google
+</a><br>
+
+<a href="calculadora_arcaica.html" target="_blank" >
+Calculadora
+</a>
+</div>
+
+<table width="100%" border="1">
+<tr>
+<td>Cursos destacados&nbsp;&nbsp;<input type="button"  value="Cursos" id="cursos"></td>
+<td>Información adicional&nbsp;&nbsp;<input type="button"  value="Información" id="informacion"></td>
+</tr>
+
+
+
+
+</body>
+</html>
+-----------------------------------------video36_TOGGLESCLASS-------------------------------------
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+.linkdestacacursos{
+	/*background-color:#F00;*/
+	color:#F00;
+	font-weight:bold;
+	margin-left:25px;
+	
+}
+
+a{
+	display:block;
+	margin-bottom:20px;
+	font-size:24px;
+}
+table{
+	text-align:center;
+	border:none;
+}
+
+td{
+	border:none;
+}
+
+#contieneEnlaces {
+	position: absolute;
+	left: 31px;
+	top: 65px;
+	width: 400px;
+	height: 649px;
+	z-index: 1;
+	padding-top:100px;
+}
+</style>
+
+<script src="Jquery/jquery-v3.3.1.js"></script>
+<script>
+	$(document).ready(function(){
+		//$("a[href^='https://']").addClass("linkdestacacursos");
+
+		document.getElementById("cursos").addEventListener("click",resaltacursos,false);
+		document.getElementById("informacion").addEventListener("click",resaltainformacion,false);
+	});
+
+function resaltacursos(){
+	/*$(".ejemplos").removeClass("linkdestacacursos");
+	$(".cursos").addClass("linkdestacacursos");*/
+	$(".cursos").toggleClass("linkdestacacursos");
+}
+
+function resaltainformacion(){
+	/*$(".cursos").removeClass("linkdestacacursos");
+	$(".ejemplos").addClass("linkdestacacursos");*/
+	$(".ejemplos").toggleClass("linkdestacacursos");
+
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="contieneEnlaces">
+
+<a href="https://www.youtube.com/watch?v=O7Ae8QCiBC4" target="_blank" class="cursos">
+Canal Maatc
+</a><br>
+
+<a href="http://www.google.com" target="_blank" class="ejemplos">
+Google
+</a><br>
+
+<a href="https://www.youtube.com/user/pildorasinformaticas" target="_blank" class="cursos">
+Píldoras informáticas YouTube
+</a><br>
+
+<a href="remover_reemplazar.html" target="_blank" >
+Remover y reemplazar
+</a><br>
+
+<a href="https://news.google.es/" target="_blank" class="ejemplos">
+Noticias google
+</a><br>
+
+<a href="calculadora_arcaica.html" target="_blank" >
+Calculadora
+</a>
+</div>
+
+<table width="100%" border="1">
+<tr>
+<td>Cursos destacados&nbsp;&nbsp;<input type="checkbox"  value="Cursos" id="cursos"></td>
+<td>Información adicional&nbsp;&nbsp;<input type="checkbox"  value="Información" id="informacion"></td>
+</tr>
+
+
+
+
+</body>
+</html>
+----------------------------------------------VIDEO37_CAMBIANDO_PROPIEDADESCSS----------------------
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+h1{
+	text-align:center;
+}
+
+div{
+	width:20%;
+	margin:0 100px;
+	float:left;
+	border:#F00 solid 2px;
+	padding:10px;
+}
+
+table{
+	width:100%;
+	margin-top:10px;
+}
+
+
+</style>
+<script src="Jquery/jquery-v3.3.1.js"></script>
+
+<script>
+	$(document).ready(function()
+	{
+		document.getElementById("aumenta1").addEventListener("click",aumentar,false);
+		document.getElementById("disminuye1").addEventListener("click",disminuir,false);
+	});
+
+	function aumentar()
+	{
+		var tamDefecto=$("#noticia1").css("font-size");
+		tamDefecto=parseInt(tamDefecto);
+		$("#noticia1").css("font-size", tamDefecto*1.5);
+	}
+	function disminuir()
+	{
+		var tamDefecto=$("#noticia1").css("font-size");
+		tamDefecto=parseInt(tamDefecto);
+		$("#noticia1").css("font-size",tamDefecto/2)
+	}
+
+</script>
+</head>
+
+<body>
+
+<h1>NOTICIAS</h1>
+<div id="noticia1">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta1"></td><td style="text-align:right"><input type="button" value="Disminuir" id="disminuye1"></td></tr></table></div>
+
+<div id="noticia2">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta2"></td><td style="text-align:right"><input type="button" value="Disminuir" id="disminuye2"></td></tr></table></div>
+
+<div id="noticia3">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta3"></td><td style="text-align:right"><input type="button" value="Disminuir" id="disminuye3"></td></tr></table></div>
+</body>
+</html>
+------------------------------------------------video38-----------------------------------
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+h1{
+	text-align:center;
+}
+
+div{
+	width:20%;
+	margin:0 100px;
+	float:left;
+	border:#F00 solid 2px;
+	padding:10px;
+}
+
+table{
+	width:100%;
+	margin-top:10px;
+}
+
+
+</style>
+<script src="Jquery/jquery-v3.3.1.js"></script>
+
+<script>
+	$(document).ready(function()
+	{
+
+		/*document.getElementById("aumenta1").addEventListener("click",aumentar,false);
+		document.getElementById("disminuye1").addEventListener("click",disminuir,false);
+	}*/
+
+	var botones=document.querySelectorAll("input");
+
+	for (var i=0;botones.length;i++){
+	    botones[i].addEventListener("click",aumentar,false);
+	    botones[i].addEventListener("click",disminuir,false);
+	}
+	});
+
+	function aumentar(e)
+	{
+		var zonaActuacion;
+		if(e.target==aumenta1){
+			zonaActuacion="#noticia1";
+		}else if (e.target==aumenta2) {
+			zonaActuacion="#noticia2";
+		}else if(e.target==aumenta3){
+			zonaActuacion="#noticia3";
+		}
+
+		var tamDefecto=$(zonaActuacion).css("font-size");
+		tamDefecto=parseInt(tamDefecto);
+		$(zonaActuacion).css("font-size", tamDefecto*1.5);
+	}
+	function disminuir(e)
+	{
+		var zonaActuacion;
+		if(e.target==disminuye1){
+			zonaActuacion="#noticia1";
+		}else if (e.target==disminuye2) {
+			zonaActuacion="#noticia2";
+		}else if(e.target==disminuye3){
+			zonaActuacion="#noticia3";
+		}
+		var tamDefecto=$(zonaActuacion).css("font-size");
+		tamDefecto=parseInt(tamDefecto);
+		$(zonaActuacion).css("font-size",tamDefecto/2)
+	}
+
+</script>
+</head>
+
+<body>
+
+<h1>NOTICIAS</h1>
+<div id="noticia1">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta1"></td><td style="text-align:right"><input type="button" value="Disminuir" id="disminuye1"></td></tr></table></div>
+
+<div id="noticia2">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta2"></td><td style="text-align:right"><input type="button" value="Disminuir" id="disminuye2"></td></tr></table></div>
+
+<div id="noticia3">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta3"></td><td style="text-align:right"><input type="button" value="Disminuir" id="disminuye3"></td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+curso angular
+
+instalar visual studio code //code.visualstudio.com
+instalar git // git-scm.com
+instalar node 10  //nodejs.org/es/
+
+ingresar al cmd 
+*node --version
+* install -g @angular/cli
+
+en el mismo cmd creamos nuestro primer proyecto 
+*d:
+*ng new miprimeraaplicacion
+
+
+*cd miprimeraaplicacion
+*ng serve
+*te abre tu aplicacion en internet localhost:4200
+
+
+debemos fijarnos si esta instalado 
+*package.json
+*node_modules
+
+
+jsonplaceholder
+
+
+control shift p abre una terminal 
+ng serve -o
+
+
+usando angular
+asset : es para guardar imagenes 
+index_html redirecciona una etiqueta a app
+styles.css
+app
+dentro de app.component.html se puede modificar 
+
+
+
+
+app module.ts //vamos a cargar varias cosas ejemplo importar 
+
+
+creando las carpetas 
+*terminal integred 
+*ng generate component hola-mundo
+
+
+
+
+
+
+npm init --yes
+
+
+npm i nodemon
+
+
